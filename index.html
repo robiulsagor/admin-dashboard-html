@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="brand">
+            <i class="lab la-affiliatetheme"></i>
+            <span>Artstate</span>
+        </div>
+
+        <div class="sidemenu">
+            <div class="side-img">
+                <img src="./imgs/user2.png" alt="">
+            </div>
+            <div class="side-user">
+                <small>Robiul Islam Sagar</small>
+                <span>Web Developer</span>
+            </div>
+
+            <ul class="menu">
+                <a href="#">
+                    <li>
+                        <span class="las la-home"></span>
+                        <span>Home</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="active">
+                        <span class="las la-balance-scale"></span>
+                        <span>Finance</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-chart-pie"></span>
+                        <span>Analytics</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-calendar"></span>
+                        <span>Calendar</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-user"></span>
+                        <span>Contacts</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-shopping-cart"></span>
+                        <span>Ecommerce</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-envelope"></span>
+                        <span>Mailbox</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-check-circle"></span>
+                        <span>Tasks</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-lock"></span>
+                        <span>Authentication</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <span class="las la-file-invoice-dollar"></span>
+                        <span>Price</span>
+                    </li>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <!-- sidebar ends here -->
+
+    <div class="main">
+        <header>
+            <label for="menu-toggle" class="menu-icon">
+                <i class="las la-bars"></i>
+            </label>
+
+            <div class="search">
+                <i class="las la-search"></i>
+                <input type="search" placeholder="Enter keyword">
+            </div>
+
+            <div class="header-icons">
+                <i class="las la-bell"></i>
+                <i class="las la-bookmark"></i>
+                <i class="las la-comment-alt"></i>
+            </div>
+        </header>
+        <!-- header ends -->
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="las la-users card-1"></i>
+                </div>
+
+                <span class="card-num">
+                    3,852
+                </span>
+                <small class="card-text">
+                    Total followers
+                </small>
+
+                <div class="card-images">
+                    <img src="./imgs/img-1.jpg" alt="">
+                    <img src="./imgs/img-2.jpg" alt="">
+                    <img src="./imgs/img-3.jpg" alt="">
+                    <img src="./imgs/img-4.jpg" alt="">
+                    <img src="./imgs/img-5.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="las la-heart card-2"></i>
+                </div>
+
+                <span class="card-num">
+                    27,390
+                </span>
+                <small class="card-text">
+                    Total likes
+                </small>
+
+                <div class="card-images">
+                    <img src="./imgs/img-1.jpg" alt="">
+                    <img src="./imgs/img-2.jpg" alt="">
+                    <img src="./imgs/img-3.jpg" alt="">
+                    <img src="./imgs/img-4.jpg" alt="">
+                    <img src="./imgs/img-5.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="las la-comments card-3"></i>
+                </div>
+
+                <span class="card-num">
+                    365
+                </span>
+                <small class="card-text">
+                    Total comments
+                </small>
+
+                <div class="card-images">
+                    <img src="./imgs/img-1.jpg" alt="">
+                    <img src="./imgs/img-2.jpg" alt="">
+                    <img src="./imgs/img-3.jpg" alt="">
+                    <img src="./imgs/img-4.jpg" alt="">
+                    <img src="./imgs/img-5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- cards ends here -->
+
+        <!-- charts begin -->
+        <div class="charts">
+            <div class="chart-line">
+                <div class="chart-head">
+                    <h2>Followers</h2>
+                    <i class="las la-cog"></i>
+                </div>
+                <div id="followers" style=" height: 350px;"></div>
+            </div>
+            <div class="chart-pie">
+                <div class="chart-head">
+                    <h2>Sales</h2>
+                    <i class="las la-ellipsis-h"></i>
+                </div>
+                <div id="sales" style=" height: 350px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
